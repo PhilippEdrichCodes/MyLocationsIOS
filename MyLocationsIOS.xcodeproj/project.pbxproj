@@ -14,6 +14,8 @@
 		4AE343E929268D4600B25A9B /* MyLocationsIOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4AE343E729268D4600B25A9B /* MyLocationsIOS.xcdatamodeld */; };
 		4AE343EB29268D4800B25A9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AE343EA29268D4800B25A9B /* Assets.xcassets */; };
 		4AE343EE29268D4800B25A9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AE343EC29268D4800B25A9B /* LaunchScreen.storyboard */; };
+		4AE343F629268E1200B25A9B /* Coords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE343F529268E1200B25A9B /* Coords.swift */; };
+		4AE343F829268E6600B25A9B /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE343F729268E6600B25A9B /* Location.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		4AE343EA29268D4800B25A9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4AE343ED29268D4800B25A9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4AE343EF29268D4800B25A9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4AE343F529268E1200B25A9B /* Coords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coords.swift; sourceTree = "<group>"; };
+		4AE343F729268E6600B25A9B /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 				4AE343E029268D4600B25A9B /* SceneDelegate.swift */,
 				4AE343E229268D4600B25A9B /* ViewController.swift */,
 				4AE343E429268D4600B25A9B /* Main.storyboard */,
+				4AE343F529268E1200B25A9B /* Coords.swift */,
+				4AE343F729268E6600B25A9B /* Location.swift */,
 				4AE343EA29268D4800B25A9B /* Assets.xcassets */,
 				4AE343EC29268D4800B25A9B /* LaunchScreen.storyboard */,
 				4AE343EF29268D4800B25A9B /* Info.plist */,
@@ -142,8 +148,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AE343E929268D4600B25A9B /* MyLocationsIOS.xcdatamodeld in Sources */,
+				4AE343F629268E1200B25A9B /* Coords.swift in Sources */,
 				4AE343E329268D4600B25A9B /* ViewController.swift in Sources */,
 				4AE343DF29268D4600B25A9B /* AppDelegate.swift in Sources */,
+				4AE343F829268E6600B25A9B /* Location.swift in Sources */,
 				4AE343E129268D4600B25A9B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,6 +302,7 @@
 				DEVELOPMENT_TEAM = 4N5CZF3G4Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyLocationsIOS/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "My Locations";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -322,6 +331,7 @@
 				DEVELOPMENT_TEAM = 4N5CZF3G4Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyLocationsIOS/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "My Locations";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
