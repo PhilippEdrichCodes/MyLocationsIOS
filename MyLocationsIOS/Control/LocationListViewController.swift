@@ -13,9 +13,9 @@ class LocationListViewController: UIViewController {
     
     let locationList: [Location] =
     [
-        Location(name: "Home", description: "myHome", w3w: "///at.my.home", coords: Coords(longitude: -1.0, latitude: -2.0)),
-        Location(name: "Work", description: "myWorkPlace", w3w: "///my.work.place", coords: Coords(longitude: -3.0, latitude: 4.6)),
-        Location(name: "Hell", description: "Hells Bells", w3w: "///yeah.hells.bells", coords: Coords(longitude: -6.66, latitude: -6.66))
+//        Location(name: "Home", description: "myHome", w3w: "///at.my.home", coords: Coords(longitude: -1.0, latitude: -2.0)),
+//        Location(name: "Work", description: "myWorkPlace", w3w: "///my.work.place", coords: Coords(longitude: -3.0, latitude: 4.6)),
+//        Location(name: "Hell", description: "Hells Bells", w3w: "///yeah.hells.bells", coords: Coords(longitude: -6.66, latitude: -6.66))
     ]
     
     @IBOutlet weak var searchBar: UISearchBar!

@@ -24,8 +24,8 @@ class LocationDetailViewController: UIViewController {
         nameLabel.text = location.name
         descriptionLabel.text = location.description
         w3wLabel.text = location.w3w
-        longitudeLabel.text = String(location.coords.longitude)
-        latitudeLabel.text = String(location.coords.latitude)
+//        longitudeLabel.text = String(location.coords.longitude)
+//        latitudeLabel.text = String(location.coords.latitude)
 
     }
 

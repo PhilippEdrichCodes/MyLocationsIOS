@@ -10,6 +10,11 @@ import Foundation
 struct K {
     static let appName = "My Locations"
     
+    struct UI {
+        static let loginCardView = "LoginCardView"
+        static let registerCardView = "RegisterCardView"
+    }
+    
     struct Nav {
         static let welcomeLogin = "WelcomeToLoginSegue"
         static let welcomeRegister = "WelcomeToRegisterSegue"
