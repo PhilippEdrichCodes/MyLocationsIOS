@@ -18,6 +18,7 @@ struct K {
     struct Nav {
         static let welcomeLogin = "WelcomeToLoginSegue"
         static let welcomeRegister = "WelcomeToRegisterSegue"
+        static let registerLogin = "RegisterToLoginSegue"
     }
     
     struct Color {
