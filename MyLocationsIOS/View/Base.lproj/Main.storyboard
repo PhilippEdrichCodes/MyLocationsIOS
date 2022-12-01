@@ -11,7 +11,7 @@
         <!--List-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyLocationsIOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LocationListViewController" customModule="MyLocationsIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,7 +27,7 @@
                                 <rect key="frame" x="16" y="175" width="361" height="586"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="4e5-xO-ern">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="locationCell" id="4e5-xO-ern">
                                         <rect key="frame" x="0.0" y="50" width="361" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4e5-xO-ern" id="8vM-wg-PrP">
@@ -52,7 +52,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="List" id="7bw-ko-PMd"/>
                     <connections>
-                        <segue destination="WgF-P8-kb0" kind="show" id="wRJ-7C-uqM"/>
+                        <outlet property="searchBar" destination="EVz-wr-uZy" id="vaB-e1-e15"/>
+                        <outlet property="tableView" destination="w1X-sQ-i8b" id="Koe-Fd-y6r"/>
+                        <segue destination="WgF-P8-kb0" kind="show" identifier="listToDetailSegue" id="Pcp-pt-ps1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -62,13 +64,13 @@
         <!--Detail-->
         <scene sceneID="C40-YE-2Hc">
             <objects>
-                <viewController id="WgF-P8-kb0" sceneMemberID="viewController">
+                <viewController id="WgF-P8-kb0" customClass="LocationDetailViewController" customModule="MyLocationsIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BM7-VY-1ey">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="uNK-yl-vzG">
-                                <rect key="frame" x="32" y="322.33333333333331" width="329" height="177"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="uNK-yl-vzG">
+                                <rect key="frame" x="32" y="322.33333333333331" width="329" height="185"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="9kW-1P-WGr">
                                         <rect key="frame" x="0.0" y="0.0" width="329" height="61.666666666666664"/>
@@ -105,7 +107,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Vbl-hu-Sdl">
-                                        <rect key="frame" x="0.0" y="77.666666666666686" width="329" height="99.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="85.666666666666686" width="329" height="99.333333333333314"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coordinates" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kmm-5X-Zsd">
                                                 <rect key="frame" x="0.0" y="0.0" width="140" height="24"/>
@@ -208,6 +210,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Detail" style="editor" id="NcD-Rn-s80"/>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="SqW-9g-3a6" id="iSj-CE-2fs"/>
+                        <outlet property="latitudeLabel" destination="sXk-By-r4q" id="5Jc-7X-QfS"/>
+                        <outlet property="longitudeLabel" destination="7q3-8h-3z0" id="CRn-Zg-2ga"/>
+                        <outlet property="nameLabel" destination="bE3-J7-TJt" id="tI9-6N-bVz"/>
+                        <outlet property="w3wLabel" destination="dnQ-jf-r1w" id="0Bt-tP-KuX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DcP-SO-AWO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
