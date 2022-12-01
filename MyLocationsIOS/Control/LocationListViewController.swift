@@ -25,9 +25,14 @@ class LocationListViewController: UIViewController {
         super.viewDidLoad()
 
         tableView.dataSource = self
+        tableView.delegate = self
     }
 
 }
+
+// MARK: - UITableView
+
+// MARK: - UITableViewDataSource
 
 extension LocationListViewController: UITableViewDataSource {
     
@@ -48,6 +53,10 @@ extension LocationListViewController: UITableViewDataSource {
         
         return cell
     }
-    
+}
+
+// MARK: - UITableViewDelegate
+
+extension LocationListViewController: UITableViewDelegate {
     
 }
