@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8DN-gi-Pbh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Vd5-Bb-DgR">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -59,7 +59,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2893.8931297709923" y="-27.464788732394368"/>
+            <point key="canvasLocation" x="3820.6106870229005" y="-27.464788732394368"/>
         </scene>
         <!--Detail-->
         <scene sceneID="C40-YE-2Hc">
@@ -220,7 +220,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DcP-SO-AWO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3846.5648854961833" y="-27.464788732394368"/>
+            <point key="canvasLocation" x="4773.2824427480919" y="-27.464788732394368"/>
         </scene>
         <!--Overview-->
         <scene sceneID="tu1-sT-F35">
@@ -239,7 +239,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Rk-2C-Uxd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1967.175572519084" y="-27.464788732394368"/>
+            <point key="canvasLocation" x="2893.8931297709923" y="-27.464788732394368"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="rka-G5-qYQ">
@@ -257,7 +257,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GCB-s3-cW2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1040.4580152671756" y="-27.464788732394368"/>
+            <point key="canvasLocation" x="1967.175572519084" y="-27.464788732394368"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="vdj-V7-doV">
@@ -268,18 +268,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YK5-2d-1Un">
-                                <rect key="frame" x="64" y="799" width="265" height="35"/>
+                                <rect key="frame" x="64" y="750" width="265" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Register"/>
                                 <connections>
+                                    <action selector="registerButtonPressed:" destination="wG3-9N-cbz" eventType="touchUpInside" id="aRu-za-ebd"/>
                                     <segue destination="OUQ-GU-Ysy" kind="show" identifier="WelcomeToRegisterSegue" id="hl4-4w-HOH"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H9B-bA-t1F">
-                                <rect key="frame" x="64" y="748" width="265" height="35"/>
+                                <rect key="frame" x="64" y="699" width="265" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Login"/>
                                 <connections>
+                                    <action selector="logInButtonPressed:" destination="wG3-9N-cbz" eventType="touchUpInside" id="zX7-R3-tSz"/>
                                     <segue destination="2uR-rX-eqO" kind="show" identifier="WelcomeToLoginSegue" id="Kms-dK-eK1"/>
                                 </connections>
                             </button>
@@ -307,12 +309,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JHZ-8k-WK2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1052.6717557251909" y="-28.169014084507044"/>
+            <point key="canvasLocation" x="-127.48091603053435" y="-28.169014084507044"/>
         </scene>
-        <!--Login View Controller-->
+        <!--Log In-->
         <scene sceneID="WIv-5S-QnM">
             <objects>
-                <viewController id="2uR-rX-eqO" customClass="LoginViewController" customModule="MyLocationsIOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Log In" id="2uR-rX-eqO" customClass="LoginViewController" customModule="MyLocationsIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jfk-vd-xDA">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -337,11 +339,14 @@
                                                 <rect key="frame" x="0.0" y="132" width="297" height="34.333333333333343"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Log In" cornerStyle="dynamic"/>
+                                                <connections>
+                                                    <action selector="logInButtonPressed:" destination="2uR-rX-eqO" eventType="touchUpInside" id="cWZ-is-lKq"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="cBo-Hk-69Z" secondAttribute="trailing" constant="16" id="7lM-b5-mZd"/>
                                     <constraint firstAttribute="bottom" secondItem="cBo-Hk-69Z" secondAttribute="bottom" constant="16" id="B7B-t1-wPT"/>
@@ -375,7 +380,7 @@
                             <constraint firstItem="hck-kL-ocg" firstAttribute="trailing" secondItem="wH7-0c-x6m" secondAttribute="trailing" constant="32" id="vem-6T-nuX"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="4XI-8L-9QA"/>
+                    <navigationItem key="navigationItem" title="Log In" id="4XI-8L-9QA"/>
                     <connections>
                         <outlet property="emailTextField" destination="dP7-Wz-Tuh" id="I7c-BW-ynL"/>
                         <outlet property="passwordTextField" destination="fBH-rL-jUS" id="cXE-KY-h1e"/>
@@ -383,12 +388,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Dw-yR-rrs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-269" y="-363"/>
+            <point key="canvasLocation" x="657.25190839694653" y="-363.38028169014086"/>
         </scene>
-        <!--Register View Controller-->
+        <!--Registration-->
         <scene sceneID="a5q-sN-ogZ">
             <objects>
-                <viewController id="OUQ-GU-Ysy" customClass="RegisterViewController" customModule="MyLocationsIOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Registration" id="OUQ-GU-Ysy" customClass="RegisterViewController" customModule="MyLocationsIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jbm-rn-Rd2">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -413,11 +418,14 @@
                                                 <rect key="frame" x="0.0" y="132" width="297" height="34.333333333333343"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                                <connections>
+                                                    <action selector="registerButtonPressed:" destination="OUQ-GU-Ysy" eventType="touchUpInside" id="tmp-AY-9LA"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.5097449422" green="0.75295054910000003" blue="0.76862120629999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="a8l-DZ-Von" secondAttribute="bottom" constant="16" id="1w8-Qs-DpZ"/>
                                     <constraint firstAttribute="trailing" secondItem="a8l-DZ-Von" secondAttribute="trailing" constant="16" id="EME-8r-ZWR"/>
@@ -451,22 +459,27 @@
                             <constraint firstItem="3VY-WJ-IKK" firstAttribute="trailing" secondItem="ZK6-3q-JN5" secondAttribute="trailing" constant="32" id="m80-Bv-NEB"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="eoZ-pb-cPa"/>
+                    <navigationItem key="navigationItem" title="Registration" id="eoZ-pb-cPa"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="5Jr-el-POW" id="f0e-vP-OWS"/>
+                        <outlet property="passwordTextField" destination="lLt-1e-brh" id="DYQ-Ag-wrM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J96-Sg-Yqh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-269" y="289"/>
+            <point key="canvasLocation" x="657.25190839694653" y="288.73239436619718"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Item-->
         <scene sceneID="1U0-O8-rKp">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8DN-gi-Pbh" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="R5w-cl-qsf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="G8j-fN-Lod">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" type="system" weight="black" pointSize="0.0"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -476,7 +489,24 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lyk-Ss-Uik" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1979.3893129770991" y="-28.169014084507044"/>
+            <point key="canvasLocation" x="-1052.6717557251909" y="-28.169014084507044"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="YSL-be-xyp">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Vd5-Bb-DgR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8kI-SW-GE6">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="8DN-gi-Pbh" kind="relationship" relationship="viewControllers" id="mTY-6p-dP9"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tdF-Gq-hGB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2005" y="-27"/>
         </scene>
     </scenes>
     <resources>
