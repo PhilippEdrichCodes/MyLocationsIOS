@@ -8,7 +8,7 @@
 import Foundation
 
 struct K {
-    static let appName = "LocationIOS"
+    static let appName = "My Locations"
     
     struct Nav {
         static let welcomeSegue = "WelcomeToStartSeque"

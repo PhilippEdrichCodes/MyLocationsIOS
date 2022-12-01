@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fNt-gE-0uC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8DN-gi-Pbh">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -59,7 +59,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1967.175572519084" y="-27.464788732394368"/>
+            <point key="canvasLocation" x="2893.8931297709923" y="-27.464788732394368"/>
         </scene>
         <!--Detail-->
         <scene sceneID="C40-YE-2Hc">
@@ -220,7 +220,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DcP-SO-AWO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2919.8473282442746" y="-27.464788732394368"/>
+            <point key="canvasLocation" x="3846.5648854961833" y="-27.464788732394368"/>
         </scene>
         <!--Overview-->
         <scene sceneID="tu1-sT-F35">
@@ -239,7 +239,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Rk-2C-Uxd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1040.4580152671756" y="-27.464788732394368"/>
+            <point key="canvasLocation" x="1967.175572519084" y="-27.464788732394368"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="rka-G5-qYQ">
@@ -247,6 +247,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="fNt-gE-0uC" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="max-4n-tua">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -256,7 +257,64 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GCB-s3-cW2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="113.74045801526717" y="-27.464788732394368"/>
+            <point key="canvasLocation" x="1040.4580152671756" y="-27.464788732394368"/>
+        </scene>
+        <!--Welcome View Controller-->
+        <scene sceneID="vdj-V7-doV">
+            <objects>
+                <viewController id="wG3-9N-cbz" customClass="WelcomeViewController" customModule="MyLocationsIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kh5-HC-Baz">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YK5-2d-1Un">
+                                <rect key="frame" x="64" y="799" width="265" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Register"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H9B-bA-t1F">
+                                <rect key="frame" x="64" y="748" width="265" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Login"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mkk-jc-S2o"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="H9B-bA-t1F" firstAttribute="trailing" secondItem="YK5-2d-1Un" secondAttribute="trailing" id="4e0-mi-ErY"/>
+                            <constraint firstItem="mkk-jc-S2o" firstAttribute="trailing" secondItem="YK5-2d-1Un" secondAttribute="trailing" constant="64" id="bZa-uG-fjA"/>
+                            <constraint firstItem="YK5-2d-1Un" firstAttribute="top" secondItem="H9B-bA-t1F" secondAttribute="bottom" constant="16" id="cIe-Ug-n20"/>
+                            <constraint firstItem="H9B-bA-t1F" firstAttribute="leading" secondItem="YK5-2d-1Un" secondAttribute="leading" id="glG-Lp-C4D"/>
+                            <constraint firstItem="YK5-2d-1Un" firstAttribute="leading" secondItem="mkk-jc-S2o" secondAttribute="leading" constant="64" id="iVq-JB-heg"/>
+                            <constraint firstItem="YK5-2d-1Un" firstAttribute="bottom" secondItem="mkk-jc-S2o" secondAttribute="bottom" constant="16" id="zi3-v6-PUL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="sor-Ny-WCw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JHZ-8k-WK2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1052.6717557251909" y="-28.169014084507044"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1U0-O8-rKp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8DN-gi-Pbh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="G8j-fN-Lod">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" weight="black" pointSize="0.0"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wG3-9N-cbz" kind="relationship" relationship="rootViewController" id="YDT-op-9sf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lyk-Ss-Uik" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1979.3893129770991" y="-28.169014084507044"/>
         </scene>
     </scenes>
     <resources>
