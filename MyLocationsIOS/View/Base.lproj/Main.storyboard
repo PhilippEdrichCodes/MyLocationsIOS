@@ -271,19 +271,35 @@
                                 <rect key="frame" x="64" y="799" width="265" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Register"/>
+                                <connections>
+                                    <action selector="registerButtonPressed:" destination="wG3-9N-cbz" eventType="touchUpInside" id="h4G-hg-P1S"/>
+                                    <segue destination="OUQ-GU-Ysy" kind="show" identifier="WelcomeToRegisterSegue" id="hl4-4w-HOH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H9B-bA-t1F">
                                 <rect key="frame" x="64" y="748" width="265" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Login"/>
+                                <connections>
+                                    <action selector="logInButtonPressed:" destination="wG3-9N-cbz" eventType="touchUpInside" id="2sj-E0-Hbh"/>
+                                    <segue destination="2uR-rX-eqO" kind="show" identifier="WelcomeToLoginSegue" id="Kms-dK-eK1"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Locations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nxs-Pz-RZh">
+                                <rect key="frame" x="80" y="405" width="233" height="42"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mkk-jc-S2o"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="H9B-bA-t1F" firstAttribute="trailing" secondItem="YK5-2d-1Un" secondAttribute="trailing" id="4e0-mi-ErY"/>
+                            <constraint firstItem="nxs-Pz-RZh" firstAttribute="centerX" secondItem="kh5-HC-Baz" secondAttribute="centerX" id="SiF-9G-XZX"/>
                             <constraint firstItem="mkk-jc-S2o" firstAttribute="trailing" secondItem="YK5-2d-1Un" secondAttribute="trailing" constant="64" id="bZa-uG-fjA"/>
                             <constraint firstItem="YK5-2d-1Un" firstAttribute="top" secondItem="H9B-bA-t1F" secondAttribute="bottom" constant="16" id="cIe-Ug-n20"/>
+                            <constraint firstItem="nxs-Pz-RZh" firstAttribute="centerY" secondItem="kh5-HC-Baz" secondAttribute="centerY" id="dRe-z4-ZkH"/>
                             <constraint firstItem="H9B-bA-t1F" firstAttribute="leading" secondItem="YK5-2d-1Un" secondAttribute="leading" id="glG-Lp-C4D"/>
                             <constraint firstItem="YK5-2d-1Un" firstAttribute="leading" secondItem="mkk-jc-S2o" secondAttribute="leading" constant="64" id="iVq-JB-heg"/>
                             <constraint firstItem="YK5-2d-1Un" firstAttribute="bottom" secondItem="mkk-jc-S2o" secondAttribute="bottom" constant="16" id="zi3-v6-PUL"/>
@@ -294,6 +310,58 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JHZ-8k-WK2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1052.6717557251909" y="-28.169014084507044"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="WIv-5S-QnM">
+            <objects>
+                <viewController id="2uR-rX-eqO" customClass="LoginViewController" customModule="MyLocationsIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jfk-vd-xDA">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dP7-Wz-Tuh">
+                                <rect key="frame" x="148" y="380" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fBH-rL-jUS">
+                                <rect key="frame" x="148" y="438" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gIo-zP-NDz">
+                                <rect key="frame" x="161" y="494" width="71" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Log In"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hck-kL-ocg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="4XI-8L-9QA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Dw-yR-rrs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-269" y="-363"/>
+        </scene>
+        <!--Register View Controller-->
+        <scene sceneID="a5q-sN-ogZ">
+            <objects>
+                <viewController id="OUQ-GU-Ysy" customClass="RegisterViewController" customModule="MyLocationsIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jbm-rn-Rd2">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="3VY-WJ-IKK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="eoZ-pb-cPa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J96-Sg-Yqh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-269" y="289"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1U0-O8-rKp">

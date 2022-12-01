@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A638DE72938C32E00FFB4C3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A638DE62938C32E00FFB4C3 /* LoginViewController.swift */; };
+		4A638DE92938C35D00FFB4C3 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A638DE82938C35D00FFB4C3 /* RegisterViewController.swift */; };
 		4A737AB82938A66C00038F7B /* Location+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A737AB42938A66C00038F7B /* Location+CoreDataClass.swift */; };
 		4A737AB92938A66C00038F7B /* Location+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A737AB52938A66C00038F7B /* Location+CoreDataProperties.swift */; };
 		4A737ABA2938A66C00038F7B /* Coords+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A737AB62938A66C00038F7B /* Coords+CoreDataClass.swift */; };
@@ -30,6 +32,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A638DE62938C32E00FFB4C3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		4A638DE82938C35D00FFB4C3 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		4A737AB42938A66C00038F7B /* Location+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataClass.swift"; sourceTree = "<group>"; };
 		4A737AB52938A66C00038F7B /* Location+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4A737AB62938A66C00038F7B /* Coords+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coords+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -80,6 +84,8 @@
 				4AE343E229268D4600B25A9B /* WelcomeViewController.swift */,
 				4AE343FD29269E1100B25A9B /* LocationListViewController.swift */,
 				4AE343F929269B5000B25A9B /* LocationDetailViewController.swift */,
+				4A638DE62938C32E00FFB4C3 /* LoginViewController.swift */,
+				4A638DE82938C35D00FFB4C3 /* RegisterViewController.swift */,
 			);
 			path = Control;
 			sourceTree = "<group>";
@@ -210,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A638DE72938C32E00FFB4C3 /* LoginViewController.swift in Sources */,
 				4A737AB92938A66C00038F7B /* Location+CoreDataProperties.swift in Sources */,
 				4A737AB82938A66C00038F7B /* Location+CoreDataClass.swift in Sources */,
 				4AE343E929268D4600B25A9B /* MyLocationsIOS.xcdatamodeld in Sources */,
@@ -219,6 +226,7 @@
 				4A737ABD2938A7B800038F7B /* K.swift in Sources */,
 				4AE343FE29269E1100B25A9B /* LocationListViewController.swift in Sources */,
 				4A737ABB2938A66C00038F7B /* Coords+CoreDataProperties.swift in Sources */,
+				4A638DE92938C35D00FFB4C3 /* RegisterViewController.swift in Sources */,
 				4AE343E129268D4600B25A9B /* SceneDelegate.swift in Sources */,
 				4A737ABA2938A66C00038F7B /* Coords+CoreDataClass.swift in Sources */,
 			);

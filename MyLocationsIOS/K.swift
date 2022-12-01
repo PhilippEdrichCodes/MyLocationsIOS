@@ -11,7 +11,8 @@ struct K {
     static let appName = "My Locations"
     
     struct Nav {
-        static let welcomeSegue = "WelcomeToStartSeque"
+        static let welcomeLogin = "WelcomeToLoginSegue"
+        static let welcomeRegister = "WelcomeToRegisterSegue"
     }
     
     struct Color {
