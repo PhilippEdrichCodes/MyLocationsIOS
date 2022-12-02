@@ -9,9 +9,11 @@ import UIKit
 
 class LocationListViewController: UIViewController {
     
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
     let sectionsList: [String] = ["Personal", "Well Known"]
     
-    let locationList: [Location] =
+    var locationList: [Location] =
     [
 //        Location(name: "Home", description: "myHome", w3w: "///at.my.home", coords: Coords(longitude: -1.0, latitude: -2.0)),
 //        Location(name: "Work", description: "myWorkPlace", w3w: "///my.work.place", coords: Coords(longitude: -3.0, latitude: 4.6)),
@@ -28,6 +30,19 @@ class LocationListViewController: UIViewController {
         tableView.delegate = self
     }
 
+    @IBAction func addLocation(_ sender: UIBarButtonItem) {
+    }
+    
+    func fetchLocations() {
+        do {
+            self.locationList = try context.fetch(Location.fetchRequest())
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        } catch {
+            print("Wir konnten leider die Locations nicht fetchen.")
+        }
+    }
 }
 
 // MARK: - UITableView

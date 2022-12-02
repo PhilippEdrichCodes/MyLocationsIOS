@@ -14,6 +14,8 @@ class LocationDetailViewController: UIViewController {
     var location: Location?
     var isInEditMode = false
     
+    @IBOutlet weak var editModeButton: UIBarButtonItem!
+    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var nameTextField: UITextField!
     
@@ -29,6 +31,7 @@ class LocationDetailViewController: UIViewController {
     @IBOutlet weak var latitudeLabel: UILabel!
     @IBOutlet weak var latitudeTextField: UITextField!
     
+    @IBOutlet weak var saveButton: UIButton!
     
     // MARK: - LifeCycle Methods
     
@@ -67,6 +70,10 @@ class LocationDetailViewController: UIViewController {
         switchEditMode()
     }
     
+    @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
+        
+    }
+    
     @IBAction func w3wPinPressed(_ sender: UIButton) {
     }
     
@@ -77,6 +84,7 @@ class LocationDetailViewController: UIViewController {
     
     func switchEditMode() {
         if isInEditMode {
+            
             nameLabel.isHidden = true
             nameTextField.isHidden = false
             nameTextField.isEnabled = true
@@ -96,6 +104,8 @@ class LocationDetailViewController: UIViewController {
             longitudeLabel.isHidden = true
             longitudeTextField.isHidden = false
             longitudeTextField.isEnabled = true
+            
+            saveButton.isHidden = false
         }
         else
         {
@@ -118,6 +128,8 @@ class LocationDetailViewController: UIViewController {
             longitudeLabel.isHidden = false
             longitudeTextField.isHidden = true
             longitudeTextField.isEnabled = false
+            
+            saveButton.isHidden = true
         }
     }
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8DN-gi-Pbh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Vd5-Bb-DgR">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -50,7 +50,13 @@
                             <constraint firstItem="w1X-sQ-i8b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="s0l-Zv-PYc"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="List" id="7bw-ko-PMd"/>
+                    <navigationItem key="navigationItem" title="List" id="7bw-ko-PMd">
+                        <barButtonItem key="rightBarButtonItem" title="Add" image="plus" catalog="system" style="plain" id="hHK-bS-FEJ">
+                            <connections>
+                                <action selector="addLocation:" destination="BYZ-38-t0r" id="uQv-Mq-ArV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="searchBar" destination="EVz-wr-uZy" id="vaB-e1-e15"/>
                         <outlet property="tableView" destination="w1X-sQ-i8b" id="Koe-Fd-y6r"/>
@@ -182,6 +188,11 @@
                                     <action selector="coordsPinPressed:" destination="WgF-P8-kb0" eventType="touchUpInside" id="gPy-Ot-QGc"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wxg-sX-o4r">
+                                <rect key="frame" x="64" y="702" width="265" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Z4-Fh-PJf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -210,6 +221,7 @@
                             <constraint firstItem="6Z4-Fh-PJf" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ajB-xt-2YF" secondAttribute="trailing" symbolic="YES" id="IKa-N3-217"/>
                             <constraint firstItem="7q3-8h-3z0" firstAttribute="leading" secondItem="TKJ-Cd-2Dd" secondAttribute="trailing" constant="8" symbolic="YES" id="IMT-qV-lf0"/>
                             <constraint firstItem="6Z4-Fh-PJf" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="bE3-J7-TJt" secondAttribute="trailing" symbolic="YES" id="IUz-80-YbF"/>
+                            <constraint firstItem="6Z4-Fh-PJf" firstAttribute="bottom" secondItem="wxg-sX-o4r" secondAttribute="bottom" constant="32" id="J4p-bj-Raq"/>
                             <constraint firstItem="6Z4-Fh-PJf" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="sXk-By-r4q" secondAttribute="trailing" symbolic="YES" id="KEj-u2-ska"/>
                             <constraint firstItem="eun-LR-wdw" firstAttribute="top" secondItem="Kmm-5X-Zsd" secondAttribute="bottom" constant="32" id="Kit-Fl-JXY"/>
                             <constraint firstItem="TKJ-Cd-2Dd" firstAttribute="top" secondItem="eun-LR-wdw" secondAttribute="bottom" constant="32" id="MUC-Of-9OR"/>
@@ -231,6 +243,7 @@
                             <constraint firstItem="dnQ-jf-r1w" firstAttribute="leading" secondItem="ajB-xt-2YF" secondAttribute="leading" id="mBt-eT-5wJ"/>
                             <constraint firstItem="Ncc-hj-BtJ" firstAttribute="leading" secondItem="ajB-xt-2YF" secondAttribute="leading" id="mDJ-11-ZAK"/>
                             <constraint firstItem="UPB-By-e5e" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Kmm-5X-Zsd" secondAttribute="trailing" constant="8" symbolic="YES" id="mhm-Lf-LuH"/>
+                            <constraint firstItem="6Z4-Fh-PJf" firstAttribute="trailing" secondItem="wxg-sX-o4r" secondAttribute="trailing" constant="64" id="npD-qI-CGM"/>
                             <constraint firstItem="6Z4-Fh-PJf" firstAttribute="trailing" secondItem="9Fo-7l-oQI" secondAttribute="trailing" constant="32" id="rLG-kS-YOT"/>
                             <constraint firstItem="6Z4-Fh-PJf" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="49x-6o-1bN" secondAttribute="trailing" symbolic="YES" id="sZI-0V-vbN"/>
                             <constraint firstItem="Kmm-5X-Zsd" firstAttribute="leading" secondItem="ajB-xt-2YF" secondAttribute="leading" id="tAT-aU-tMf"/>
@@ -239,25 +252,28 @@
                             <constraint firstItem="Ncc-hj-BtJ" firstAttribute="top" secondItem="bE3-J7-TJt" secondAttribute="bottom" constant="32" id="vmY-AJ-aUw"/>
                             <constraint firstItem="bXu-0u-Uik" firstAttribute="leading" secondItem="6Z4-Fh-PJf" secondAttribute="leading" constant="32" id="xYT-AO-TQv"/>
                             <constraint firstItem="49x-6o-1bN" firstAttribute="top" secondItem="SqW-9g-3a6" secondAttribute="bottom" constant="32" id="y4g-ZN-gKb"/>
+                            <constraint firstItem="wxg-sX-o4r" firstAttribute="leading" secondItem="6Z4-Fh-PJf" secondAttribute="leading" constant="64" id="ylm-GZ-jAW"/>
                             <constraint firstItem="6Z4-Fh-PJf" firstAttribute="trailing" secondItem="gW9-pb-TDl" secondAttribute="trailing" constant="64" id="z9P-6v-GeY"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Detail" style="editor" id="NcD-Rn-s80">
                         <barButtonItem key="rightBarButtonItem" title="Edit" style="plain" id="rSh-Og-PAd">
                             <connections>
-                                <action selector="editPressed:" destination="WgF-P8-kb0" id="B8K-Xw-T0J"/>
+                                <action selector="editModeButtonPressed:" destination="WgF-P8-kb0" id="gxg-QJ-1lL"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="descriptionLabel" destination="SqW-9g-3a6" id="iSj-CE-2fs"/>
                         <outlet property="descriptionTextField" destination="bXu-0u-Uik" id="pS6-G8-ar9"/>
+                        <outlet property="editModeButton" destination="rSh-Og-PAd" id="cxg-jp-oAq"/>
                         <outlet property="latitudeLabel" destination="sXk-By-r4q" id="5Jc-7X-QfS"/>
                         <outlet property="latitudeTextField" destination="5ha-Yu-1TT" id="1Cm-7M-hCx"/>
                         <outlet property="longitudeLabel" destination="7q3-8h-3z0" id="CRn-Zg-2ga"/>
                         <outlet property="longitudeTextField" destination="kJ0-VN-XZP" id="YK1-PL-aUB"/>
                         <outlet property="nameLabel" destination="bE3-J7-TJt" id="tI9-6N-bVz"/>
                         <outlet property="nameTextField" destination="6K0-3q-zdO" id="4Gj-F0-I1e"/>
+                        <outlet property="saveButton" destination="wxg-sX-o4r" id="cab-gs-dx8"/>
                         <outlet property="w3wLabel" destination="dnQ-jf-r1w" id="0Bt-tP-KuX"/>
                         <outlet property="w3wTextField" destination="9Fo-7l-oQI" id="2tc-H0-BbJ"/>
                     </connections>
@@ -393,6 +409,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="dP7-Wz-Tuh" id="I7c-BW-ynL"/>
                         <outlet property="passwordTextField" destination="fBH-rL-jUS" id="cXE-KY-h1e"/>
+                        <segue destination="Vd5-Bb-DgR" kind="show" id="lRc-gr-Bco"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Dw-yR-rrs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -506,6 +523,7 @@
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Vd5-Bb-DgR" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="QOW-JD-qPd"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8kI-SW-GE6">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -544,6 +562,7 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="mappin.and.ellipse" catalog="system" width="117" height="128"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
