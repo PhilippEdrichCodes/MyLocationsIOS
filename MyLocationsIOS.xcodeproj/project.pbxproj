@@ -22,6 +22,8 @@
 		4A737AC82938AF1600038F7B /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 4A737AC72938AF1600038F7B /* FirebaseFirestoreCombine-Community */; };
 		4A737ACA2938AF1600038F7B /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4A737AC92938AF1600038F7B /* FirebaseFirestoreSwift */; };
 		4A7E5D64293A08B60056B690 /* AppRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7E5D63293A08B60056B690 /* AppRepository.swift */; };
+		4A7E5D68293A65730056B690 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A7E5D67293A65730056B690 /* Login.storyboard */; };
+		4A7E5D6A293A69600056B690 /* App.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A7E5D69293A69600056B690 /* App.storyboard */; };
 		4A8EA03329397E2A00996B5D /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8EA03129397E2A00996B5D /* LocationCell.swift */; };
 		4A8EA03429397E2A00996B5D /* LocationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A8EA03229397E2A00996B5D /* LocationCell.xib */; };
 		4AE343DF29268D4600B25A9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE343DE29268D4600B25A9B /* AppDelegate.swift */; };
@@ -46,6 +48,8 @@
 		4A737ABC2938A7B800038F7B /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
 		4A737ABE2938AC1900038F7B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4A7E5D63293A08B60056B690 /* AppRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRepository.swift; sourceTree = "<group>"; };
+		4A7E5D67293A65730056B690 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		4A7E5D69293A69600056B690 /* App.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = App.storyboard; sourceTree = "<group>"; };
 		4A8EA03129397E2A00996B5D /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		4A8EA03229397E2A00996B5D /* LocationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationCell.xib; sourceTree = "<group>"; };
 		4AE343DB29268D4600B25A9B /* MyLocationsIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLocationsIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,11 +84,11 @@
 		4A737AB12938A52400038F7B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4AE343E429268D4600B25A9B /* Main.storyboard */,
 				4AE343EC29268D4800B25A9B /* LaunchScreen.storyboard */,
-				4A638DEA2938C6AB00FFB4C3 /* CardView.swift */,
-				4A8EA03129397E2A00996B5D /* LocationCell.swift */,
-				4A8EA03229397E2A00996B5D /* LocationCell.xib */,
+				4AE343E429268D4600B25A9B /* Main.storyboard */,
+				4A7E5D67293A65730056B690 /* Login.storyboard */,
+				4A7E5D69293A69600056B690 /* App.storyboard */,
+				4A7E5D6B293A6BE80056B690 /* Components */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -93,10 +97,8 @@
 			isa = PBXGroup;
 			children = (
 				4AE343E229268D4600B25A9B /* WelcomeViewController.swift */,
-				4AE343FD29269E1100B25A9B /* LocationListViewController.swift */,
-				4AE343F929269B5000B25A9B /* LocationDetailViewController.swift */,
-				4A638DE62938C32E00FFB4C3 /* LoginViewController.swift */,
-				4A638DE82938C35D00FFB4C3 /* RegisterViewController.swift */,
+				4A7E5D6D293A87490056B690 /* App */,
+				4A7E5D6C293A872E0056B690 /* LogIn */,
 			);
 			path = Control;
 			sourceTree = "<group>";
@@ -119,6 +121,34 @@
 				4A737AB72938A66C00038F7B /* Coords+CoreDataProperties.swift */,
 			);
 			path = local;
+			sourceTree = "<group>";
+		};
+		4A7E5D6B293A6BE80056B690 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				4A638DEA2938C6AB00FFB4C3 /* CardView.swift */,
+				4A8EA03129397E2A00996B5D /* LocationCell.swift */,
+				4A8EA03229397E2A00996B5D /* LocationCell.xib */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		4A7E5D6C293A872E0056B690 /* LogIn */ = {
+			isa = PBXGroup;
+			children = (
+				4A638DE62938C32E00FFB4C3 /* LoginViewController.swift */,
+				4A638DE82938C35D00FFB4C3 /* RegisterViewController.swift */,
+			);
+			path = LogIn;
+			sourceTree = "<group>";
+		};
+		4A7E5D6D293A87490056B690 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				4AE343FD29269E1100B25A9B /* LocationListViewController.swift */,
+				4AE343F929269B5000B25A9B /* LocationDetailViewController.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 		4AE343D229268D4600B25A9B = {
@@ -224,7 +254,9 @@
 			files = (
 				4A8EA03429397E2A00996B5D /* LocationCell.xib in Resources */,
 				4AE343EE29268D4800B25A9B /* LaunchScreen.storyboard in Resources */,
+				4A7E5D68293A65730056B690 /* Login.storyboard in Resources */,
 				4A737ABF2938AC1A00038F7B /* GoogleService-Info.plist in Resources */,
+				4A7E5D6A293A69600056B690 /* App.storyboard in Resources */,
 				4AE343EB29268D4800B25A9B /* Assets.xcassets in Resources */,
 				4AE343E629268D4600B25A9B /* Main.storyboard in Resources */,
 			);
