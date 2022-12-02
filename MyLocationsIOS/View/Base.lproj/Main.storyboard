@@ -192,6 +192,9 @@
                                 <rect key="frame" x="64" y="702" width="265" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <action selector="saveButtonPressed:" destination="WgF-P8-kb0" eventType="touchUpInside" id="7KT-mZ-YMl"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Z4-Fh-PJf"/>

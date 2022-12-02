@@ -21,6 +21,7 @@
 		4A737AC62938AF1600038F7B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 4A737AC52938AF1600038F7B /* FirebaseFirestore */; };
 		4A737AC82938AF1600038F7B /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 4A737AC72938AF1600038F7B /* FirebaseFirestoreCombine-Community */; };
 		4A737ACA2938AF1600038F7B /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4A737AC92938AF1600038F7B /* FirebaseFirestoreSwift */; };
+		4A7E5D64293A08B60056B690 /* AppRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7E5D63293A08B60056B690 /* AppRepository.swift */; };
 		4A8EA03329397E2A00996B5D /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8EA03129397E2A00996B5D /* LocationCell.swift */; };
 		4A8EA03429397E2A00996B5D /* LocationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A8EA03229397E2A00996B5D /* LocationCell.xib */; };
 		4AE343DF29268D4600B25A9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE343DE29268D4600B25A9B /* AppDelegate.swift */; };
@@ -44,6 +45,7 @@
 		4A737AB72938A66C00038F7B /* Coords+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coords+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4A737ABC2938A7B800038F7B /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
 		4A737ABE2938AC1900038F7B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4A7E5D63293A08B60056B690 /* AppRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRepository.swift; sourceTree = "<group>"; };
 		4A8EA03129397E2A00996B5D /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		4A8EA03229397E2A00996B5D /* LocationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationCell.xib; sourceTree = "<group>"; };
 		4AE343DB29268D4600B25A9B /* MyLocationsIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLocationsIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,12 +104,21 @@
 		4A737AB32938A56A00038F7B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4A7E5D62293A086C0056B690 /* local */,
+				4A7E5D63293A08B60056B690 /* AppRepository.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4A7E5D62293A086C0056B690 /* local */ = {
+			isa = PBXGroup;
+			children = (
 				4A737AB42938A66C00038F7B /* Location+CoreDataClass.swift */,
 				4A737AB52938A66C00038F7B /* Location+CoreDataProperties.swift */,
 				4A737AB62938A66C00038F7B /* Coords+CoreDataClass.swift */,
 				4A737AB72938A66C00038F7B /* Coords+CoreDataProperties.swift */,
 			);
-			path = Model;
+			path = local;
 			sourceTree = "<group>";
 		};
 		4AE343D229268D4600B25A9B = {
@@ -237,6 +248,7 @@
 				4AE343DF29268D4600B25A9B /* AppDelegate.swift in Sources */,
 				4A737ABD2938A7B800038F7B /* K.swift in Sources */,
 				4AE343FE29269E1100B25A9B /* LocationListViewController.swift in Sources */,
+				4A7E5D64293A08B60056B690 /* AppRepository.swift in Sources */,
 				4A737ABB2938A66C00038F7B /* Coords+CoreDataProperties.swift in Sources */,
 				4A638DE92938C35D00FFB4C3 /* RegisterViewController.swift in Sources */,
 				4AE343E129268D4600B25A9B /* SceneDelegate.swift in Sources */,

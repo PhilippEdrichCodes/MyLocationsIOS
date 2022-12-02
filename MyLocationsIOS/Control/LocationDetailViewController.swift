@@ -12,7 +12,10 @@ class LocationDetailViewController: UIViewController {
     // MARK: - Properties
     
     var location: Location?
+    var locationIndex: Int?
+    
     var isInEditMode = false
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     @IBOutlet weak var editModeButton: UIBarButtonItem!
     
@@ -37,12 +40,13 @@ class LocationDetailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
         switchEditMode()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let loc = location
+        if let loc = location, let _ = locationIndex
         {
             nameLabel.text = loc.name
             nameTextField.text = loc.name
@@ -70,7 +74,7 @@ class LocationDetailViewController: UIViewController {
         switchEditMode()
     }
     
-    @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
+    @IBAction func saveButtonPressed(_ sender: UIButton) {
         
     }
     
@@ -78,6 +82,12 @@ class LocationDetailViewController: UIViewController {
     }
     
     @IBAction func coordsPinPressed(_ sender: UIButton) {
+    }
+    
+    // MARK: - Data related Methods
+    
+    func reloadLocationFromDB() {
+
     }
     
     // MARK: - UI Methods

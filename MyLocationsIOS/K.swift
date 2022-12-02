@@ -31,6 +31,6 @@ struct K {
     }
     
     struct Notifications {
-        static let notification = "Notification"
+        static let repoListChanged = "repositoryListChanged"
     }
 }
