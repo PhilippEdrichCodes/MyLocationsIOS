@@ -13,6 +13,7 @@ struct K {
     struct UI {
         static let loginCardView = "LoginCardView"
         static let registerCardView = "RegisterCardView"
+        static let locationCell = "locationCell"
     }
     
     struct Nav {

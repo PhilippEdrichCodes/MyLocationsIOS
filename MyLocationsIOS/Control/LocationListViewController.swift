@@ -45,11 +45,12 @@ extension LocationListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "locationCell", for: indexPath)
+        let location = locationList[indexPath.row]
         
-        var content = cell.defaultContentConfiguration()
-        content.text = locationList[indexPath.row].name
-        cell.contentConfiguration = content
+        let cell = tableView.dequeueReusableCell(withIdentifier: "locationCell", for: indexPath) as! LocationCell
+        cell.nameLabel.text = location.name
+        cell.descriptionLabel.text = location.desc
+        cell.w3wLabel.text = location.w3w
         
         return cell
     }
@@ -58,5 +59,8 @@ extension LocationListViewController: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 
 extension LocationListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "", sender: self)
+    }
     
 }
