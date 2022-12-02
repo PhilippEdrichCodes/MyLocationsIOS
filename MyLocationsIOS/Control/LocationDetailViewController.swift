@@ -9,16 +9,16 @@ import UIKit
 
 class LocationDetailViewController: UIViewController {
     
+    // MARK: - Properties
+    
     var location: Location?
     var isInEditMode = false
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var nameTextField: UITextField!
     
-    
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var descriptionTextField: UITextField!
-    
     
     @IBOutlet weak var w3wLabel: UILabel!
     @IBOutlet weak var w3wTextField: UITextField!
@@ -26,9 +26,11 @@ class LocationDetailViewController: UIViewController {
     @IBOutlet weak var longitudeLabel: UILabel!
     @IBOutlet weak var longitudeTextField: UITextField!
     
-    
     @IBOutlet weak var latitudeLabel: UILabel!
     @IBOutlet weak var latitudeTextField: UITextField!
+    
+    
+    // MARK: - LifeCycle Methods
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -58,10 +60,20 @@ class LocationDetailViewController: UIViewController {
         }
     }
     
+    // MARK: - IBAction Methods
+    
     @IBAction func editModeButtonPressed(_ sender: UIBarButtonItem) {
         isInEditMode = !isInEditMode
         switchEditMode()
     }
+    
+    @IBAction func w3wPinPressed(_ sender: UIButton) {
+    }
+    
+    @IBAction func coordsPinPressed(_ sender: UIButton) {
+    }
+    
+    // MARK: - UI Methods
     
     func switchEditMode() {
         if isInEditMode {

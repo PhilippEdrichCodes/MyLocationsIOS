@@ -170,11 +170,17 @@
                                 <rect key="frame" x="281" y="371.66666666666669" width="48" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="mappin.and.ellipse" catalog="system"/>
+                                <connections>
+                                    <action selector="w3wPinPressed:" destination="WgF-P8-kb0" eventType="touchUpInside" id="fou-qf-6IJ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UPB-By-e5e">
                                 <rect key="frame" x="281" y="464.33333333333331" width="48" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="mappin.and.ellipse" catalog="system"/>
+                                <connections>
+                                    <action selector="coordsPinPressed:" destination="WgF-P8-kb0" eventType="touchUpInside" id="gPy-Ot-QGc"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Z4-Fh-PJf"/>
