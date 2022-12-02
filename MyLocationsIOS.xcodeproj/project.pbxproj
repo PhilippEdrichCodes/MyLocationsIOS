@@ -21,6 +21,8 @@
 		4A737AC62938AF1600038F7B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 4A737AC52938AF1600038F7B /* FirebaseFirestore */; };
 		4A737AC82938AF1600038F7B /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 4A737AC72938AF1600038F7B /* FirebaseFirestoreCombine-Community */; };
 		4A737ACA2938AF1600038F7B /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4A737AC92938AF1600038F7B /* FirebaseFirestoreSwift */; };
+		4A8EA03329397E2A00996B5D /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8EA03129397E2A00996B5D /* LocationCell.swift */; };
+		4A8EA03429397E2A00996B5D /* LocationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A8EA03229397E2A00996B5D /* LocationCell.xib */; };
 		4AE343DF29268D4600B25A9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE343DE29268D4600B25A9B /* AppDelegate.swift */; };
 		4AE343E129268D4600B25A9B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE343E029268D4600B25A9B /* SceneDelegate.swift */; };
 		4AE343E329268D4600B25A9B /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE343E229268D4600B25A9B /* WelcomeViewController.swift */; };
@@ -42,6 +44,8 @@
 		4A737AB72938A66C00038F7B /* Coords+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coords+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4A737ABC2938A7B800038F7B /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
 		4A737ABE2938AC1900038F7B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4A8EA03129397E2A00996B5D /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
+		4A8EA03229397E2A00996B5D /* LocationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationCell.xib; sourceTree = "<group>"; };
 		4AE343DB29268D4600B25A9B /* MyLocationsIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLocationsIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AE343DE29268D4600B25A9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AE343E029268D4600B25A9B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +81,8 @@
 				4AE343E429268D4600B25A9B /* Main.storyboard */,
 				4AE343EC29268D4800B25A9B /* LaunchScreen.storyboard */,
 				4A638DEA2938C6AB00FFB4C3 /* CardView.swift */,
+				4A8EA03129397E2A00996B5D /* LocationCell.swift */,
+				4A8EA03229397E2A00996B5D /* LocationCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -205,6 +211,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A8EA03429397E2A00996B5D /* LocationCell.xib in Resources */,
 				4AE343EE29268D4800B25A9B /* LaunchScreen.storyboard in Resources */,
 				4A737ABF2938AC1A00038F7B /* GoogleService-Info.plist in Resources */,
 				4AE343EB29268D4800B25A9B /* Assets.xcassets in Resources */,
@@ -225,6 +232,7 @@
 				4A737AB82938A66C00038F7B /* Location+CoreDataClass.swift in Sources */,
 				4AE343E929268D4600B25A9B /* MyLocationsIOS.xcdatamodeld in Sources */,
 				4AE343FA29269B5000B25A9B /* LocationDetailViewController.swift in Sources */,
+				4A8EA03329397E2A00996B5D /* LocationCell.swift in Sources */,
 				4AE343E329268D4600B25A9B /* WelcomeViewController.swift in Sources */,
 				4AE343DF29268D4600B25A9B /* AppDelegate.swift in Sources */,
 				4A737ABD2938A7B800038F7B /* K.swift in Sources */,

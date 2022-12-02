@@ -58,6 +58,7 @@ class RegisterViewController: UIViewController {
                         }
                     }
                 }
+                present(alert, animated: true, completion: nil)
             }
         }
     }
