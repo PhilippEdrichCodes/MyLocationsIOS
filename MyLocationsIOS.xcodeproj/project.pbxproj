@@ -86,10 +86,7 @@
 		4A737AB12938A52400038F7B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4AE343EC29268D4800B25A9B /* LaunchScreen.storyboard */,
-				4AE343E429268D4600B25A9B /* Main.storyboard */,
-				4A7E5D67293A65730056B690 /* Login.storyboard */,
-				4A7E5D69293A69600056B690 /* App.storyboard */,
+				4AB2D0AE293E3D0C0011BD69 /* StoryBoards */,
 				4A7E5D6B293A6BE80056B690 /* Components */,
 			);
 			path = View;
@@ -152,6 +149,17 @@
 				4A7E5D6E293E04D60056B690 /* WebRessourcesViewController.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		4AB2D0AE293E3D0C0011BD69 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				4AE343EC29268D4800B25A9B /* LaunchScreen.storyboard */,
+				4AE343E429268D4600B25A9B /* Main.storyboard */,
+				4A7E5D67293A65730056B690 /* Login.storyboard */,
+				4A7E5D69293A69600056B690 /* App.storyboard */,
+			);
+			path = StoryBoards;
 			sourceTree = "<group>";
 		};
 		4AE343D229268D4600B25A9B = {
