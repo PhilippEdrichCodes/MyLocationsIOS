@@ -4,17 +4,6 @@
 <dict>
 	<key>CFBundleIdentifier</key>
 	<string></string>
-	<key>CFBundleURLTypes</key>
-	<array>
-		<dict>
-			<key>CFBundleTypeRole</key>
-			<string>None</string>
-			<key>CFBundleURLName</key>
-			<string></string>
-		</dict>
-	</array>
-	<key>LSApplicationQueriesSchemes</key>
-	<array/>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsTabbedSceneCollection</key>
@@ -35,6 +24,11 @@
 				</dict>
 			</array>
 		</dict>
+	</dict>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoadsInWebContent</key>
+		<true/>
 	</dict>
 </dict>
 </plist>
