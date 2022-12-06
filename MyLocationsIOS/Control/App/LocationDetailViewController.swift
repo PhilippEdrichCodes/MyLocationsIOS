@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LocationDetailViewController: UIViewController {
+class LocationDetailViewController: KeyboardFriendlyViewController {
     
     // MARK: - Properties
     

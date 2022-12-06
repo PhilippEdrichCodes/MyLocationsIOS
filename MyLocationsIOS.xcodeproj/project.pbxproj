@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A1663B6293F4D3700566D5A /* KeyboardFriendlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1663B5293F4D3700566D5A /* KeyboardFriendlyViewController.swift */; };
 		4A638DE72938C32E00FFB4C3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A638DE62938C32E00FFB4C3 /* LoginViewController.swift */; };
 		4A638DE92938C35D00FFB4C3 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A638DE82938C35D00FFB4C3 /* RegisterViewController.swift */; };
 		4A638DEB2938C6AB00FFB4C3 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A638DEA2938C6AB00FFB4C3 /* CardView.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A1663B5293F4D3700566D5A /* KeyboardFriendlyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardFriendlyViewController.swift; sourceTree = "<group>"; };
 		4A638DE62938C32E00FFB4C3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4A638DE82938C35D00FFB4C3 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		4A638DEA2938C6AB00FFB4C3 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				4A638DEA2938C6AB00FFB4C3 /* CardView.swift */,
 				4A8EA03129397E2A00996B5D /* LocationCell.swift */,
 				4A8EA03229397E2A00996B5D /* LocationCell.xib */,
+				4A1663B5293F4D3700566D5A /* KeyboardFriendlyViewController.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 				4AE343FA29269B5000B25A9B /* LocationDetailViewController.swift in Sources */,
 				4A8EA03329397E2A00996B5D /* LocationCell.swift in Sources */,
 				4A7E5D6F293E04D60056B690 /* WebRessourcesViewController.swift in Sources */,
+				4A1663B6293F4D3700566D5A /* KeyboardFriendlyViewController.swift in Sources */,
 				4AE343E329268D4600B25A9B /* WelcomeViewController.swift in Sources */,
 				4AE343DF29268D4600B25A9B /* AppDelegate.swift in Sources */,
 				4A737ABD2938A7B800038F7B /* K.swift in Sources */,
@@ -449,7 +453,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "My Locations";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Login;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -478,7 +482,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "My Locations";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Login;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

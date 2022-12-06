@@ -16,6 +16,11 @@ struct K {
         static let locationCell = "locationCell"
     }
     
+    struct Notify {
+        static let keyboardWillHide = "keyboardWillHide"
+        static let keyboardWillShow = "keyboardWillShow"
+    }
+    
     struct Nav {
         static let welcomeLogin = "WelcomeToLoginSegue"
         static let welcomeRegister = "WelcomeToRegisterSegue"

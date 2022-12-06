@@ -8,20 +8,54 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="WelcomeViewController" customModule="MyLocationsIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3fn-Cr-wLM">
+                                <rect key="frame" x="64" y="724" width="265" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Login"/>
+                                <connections>
+                                    <action selector="logInButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="WwP-hB-ZVX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="waY-ZZ-9lN">
+                                <rect key="frame" x="64" y="775" width="265" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Register"/>
+                                <connections>
+                                    <action selector="registerButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="0cw-Jz-fCe"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Locations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iZV-sW-GWg">
+                                <rect key="frame" x="80" y="405" width="233" height="42"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iZV-sW-GWg" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="A0G-DD-hNR"/>
+                            <constraint firstItem="waY-ZZ-9lN" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="64" id="NcB-Dc-cyb"/>
+                            <constraint firstItem="3fn-Cr-wLM" firstAttribute="leading" secondItem="waY-ZZ-9lN" secondAttribute="leading" id="Q1d-JJ-eQc"/>
+                            <constraint firstItem="iZV-sW-GWg" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="a4P-l5-14p"/>
+                            <constraint firstItem="waY-ZZ-9lN" firstAttribute="top" secondItem="3fn-Cr-wLM" secondAttribute="bottom" constant="16" id="s0q-AQ-zTV"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="waY-ZZ-9lN" secondAttribute="bottom" constant="8" id="uPR-VX-CBZ"/>
+                            <constraint firstItem="3fn-Cr-wLM" firstAttribute="trailing" secondItem="waY-ZZ-9lN" secondAttribute="trailing" id="yU3-Zk-GSI"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="waY-ZZ-9lN" secondAttribute="trailing" constant="64" id="zBu-sY-O24"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gZ2-Tu-9YU"/>
                     <connections>
-                        <segue destination="piY-Q5-rBg" kind="show" id="7Rt-8V-7Ub"/>
-                        <segue destination="d3l-xS-Cdt" kind="show" id="dkz-wq-clX"/>
+                        <segue destination="d3l-xS-Cdt" kind="show" id="Hm5-u1-Mjm"/>
+                        <segue destination="piY-Q5-rBg" kind="show" id="m2c-Ef-HLS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -46,24 +80,80 @@
             </objects>
             <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
         </scene>
-        <!--View Controller-->
+        <!--Registration-->
         <scene sceneID="5gL-F2-bLT">
             <objects>
-                <viewController id="piY-Q5-rBg" sceneMemberID="viewController">
+                <viewController id="piY-Q5-rBg" customClass="RegisterViewController" customModule="MyLocationsIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3LV-QE-bnH">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" restorationIdentifier="RegisterCardView" translatesAutoresizingMaskIntoConstraints="NO" id="N25-Wt-IGY" customClass="CardView" customModule="MyLocationsIOS" customModuleProvider="target">
+                                <rect key="frame" x="32" y="327" width="329" height="198.33333333333337"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="tJY-2L-R9U">
+                                        <rect key="frame" x="16" y="16" width="297" height="166.33333333333334"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xRU-s0-vrw">
+                                                <rect key="frame" x="0.0" y="0.0" width="297" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BDE-sb-qqM">
+                                                <rect key="frame" x="0.0" y="66" width="297" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UAz-VF-WbQ">
+                                                <rect key="frame" x="0.0" y="132" width="297" height="34.333333333333343"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Register"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="tJY-2L-R9U" firstAttribute="leading" secondItem="N25-Wt-IGY" secondAttribute="leading" constant="16" id="1U8-CM-EiC"/>
+                                    <constraint firstItem="tJY-2L-R9U" firstAttribute="top" secondItem="N25-Wt-IGY" secondAttribute="top" constant="16" id="5F2-0x-BFC"/>
+                                    <constraint firstAttribute="trailing" secondItem="tJY-2L-R9U" secondAttribute="trailing" constant="16" id="IiL-vc-7HU"/>
+                                    <constraint firstAttribute="bottom" secondItem="tJY-2L-R9U" secondAttribute="bottom" constant="16" id="J4S-Oj-Mq1"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOffsetWidth">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOffsetHeight">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="18"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="MUe-f0-xVt"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MUe-f0-xVt" firstAttribute="trailing" secondItem="N25-Wt-IGY" secondAttribute="trailing" constant="32" id="3Xb-eO-zky"/>
+                            <constraint firstItem="N25-Wt-IGY" firstAttribute="centerY" secondItem="3LV-QE-bnH" secondAttribute="centerY" id="FFE-dn-yDX"/>
+                            <constraint firstItem="N25-Wt-IGY" firstAttribute="leading" secondItem="MUe-f0-xVt" secondAttribute="leading" constant="32" id="ej3-Dj-UMm"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="ox3-U4-uzp"/>
+                    <navigationItem key="navigationItem" title="Registration" id="ox3-U4-uzp"/>
                     <connections>
-                        <segue destination="d3l-xS-Cdt" kind="show" id="cJq-ct-ujp"/>
+                        <segue destination="d3l-xS-Cdt" kind="show" identifier="RegisterToLoginSegue" id="cJq-ct-ujp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QAx-r3-Jtn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1668" y="706"/>
+            <point key="canvasLocation" x="1355" y="708"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="lvB-Gn-KnU">
@@ -79,11 +169,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yyw-cb-CQP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2465" y="-27"/>
+            <point key="canvasLocation" x="2131" y="-8"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="dkz-wq-clX"/>
+        <segue reference="cJq-ct-ujp"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">

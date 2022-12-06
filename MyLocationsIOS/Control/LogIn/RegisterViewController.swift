@@ -8,20 +8,10 @@
 import UIKit
 import FirebaseAuth
 
-class RegisterViewController: UIViewController {
+class RegisterViewController: KeyboardFriendlyViewController {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        tabBarController?.tabBar.isHidden = true
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        tabBarController?.tabBar.isHidden = false
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,7 +44,7 @@ class RegisterViewController: UIViewController {
                         if let e = error {
                             print(e.localizedDescription)
                         } else {
-                            self.performSegue(withIdentifier: "TODO", sender: self)
+                            self.performSegue(withIdentifier: K.Nav.registerLogin, sender: self)
                         }
                     }
                 }

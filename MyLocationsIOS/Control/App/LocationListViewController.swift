@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LocationListViewController: UIViewController {
+class LocationListViewController: KeyboardFriendlyViewController {
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
